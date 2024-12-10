@@ -18,4 +18,5 @@ jobs:
       - run: mvn -Pnative package
       - uses: actions/upload-artifact@v4
         with:
-          name: main
+          name: output
+          path: main
