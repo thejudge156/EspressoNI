@@ -36,12 +36,18 @@
                         </executions>
                         <configuration>
                             <mainClass>me.judge.Main</mainClass>
+                            <outputDirectory>.</outputDirectory>
+                            <imageName>main</imageName>
                         </configuration>
                     </plugin>
                 </plugins>
             </build>
         </profile>
     </profiles>
+
+    <properties>
+        <maven.compiler.release>21</maven.compiler.release>
+    </properties>
 
     <dependencies>
         <dependency>
