@@ -2,6 +2,11 @@
   {
     "type":"agent-extracted",
     "classes":[
+      { "nameInfo":"com/oracle/truffle/api/staticobject/GeneratedStaticObject$$1$$Factory", "hash":"ww50sXCFt8GhkQJEuqte37" },
+      { "nameInfo":"com/oracle/truffle/runtime/generated/GeneratedModules", "hash":"gFztcU2kcJ6ldjyYSDynm8" },
+      { "nameInfo":"com/oracle/truffle/api/staticobject/GeneratedStaticObject$$1", "hash":"BZYKdHPZv16uQKbyZinnhC" },
+      { "nameInfo":"com/oracle/truffle/api/staticobject/GeneratedStaticObject$$2", "hash":"yqrnjCc9g0DPDDcKP4taMJ" },
+      { "nameInfo":"com/oracle/truffle/api/staticobject/GeneratedStaticObject$$2$$Factory", "hash":"s7pmquJBkhI8UwdjKeDAk3" }
     ]
   }
 ]
