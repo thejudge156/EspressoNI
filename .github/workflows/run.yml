@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  run:
+  Test:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
@@ -15,4 +15,4 @@ jobs:
         with:
           distribution: 'graalvm' # See 'Supported distributions' for available options
           java-version: '21'
-      - run: mvn exec
+      - run: mvn exec:java
