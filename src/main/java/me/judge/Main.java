@@ -1,6 +1,7 @@
 package me.judge;
 
 import org.graalvm.polyglot.Context;
+import org.graalvm.polyglot.TypeLiteral;
 import org.graalvm.polyglot.Value;
 
 import java.io.File;
@@ -14,8 +15,8 @@ public class Main {
                 .allowAllAccess(true)
                 .build();
         Value pluginClazz = ctx.getBindings("java").getMember("java.lang.Class").invokeMember("forName", "me.judge.Usage");
-        JavaPlugin plugin = pluginClazz.invokeMember("getDeclaredConstructor")
-                .invokeMember("newInstance").as(JavaPlugin.class);
+        JavaPlugin plugin = (JavaPlugin) pluginClazz.invokeMember("getDeclaredConstructor")
+                .invokeMember("newInstance").as(Object.class);
         plugin.onEnable();
 
         ctx.close();
