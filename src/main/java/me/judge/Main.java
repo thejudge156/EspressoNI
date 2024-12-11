@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         File testJar = new File("testjar.jar");
         Engine engine = Engine.newBuilder()
-                .option("--compiler.Inlining", "false")
+                .option("--engine.Inlining", "false")
                 .option("--engine.WarnInterpreterOnly", "false")
                 .build();
         try(Context ctx = Context.newBuilder("java")
@@ -22,7 +22,7 @@ public class Main {
             Value bindings = ctx.getBindings("java");
 
             Value loaderVal = bindings.getMember("java.net.URLClassLoader");
-            Value loaderInstanceVal = loaderVal.invokeMember("newInstance", ctx.asValue(new URL[]{testJar.toURI().toURL()}));
+            Value loaderInstanceVal = loaderVal.invokeMember("newInstance", ctx.asValue(new URL[]{testJar.toURI().toURL()}), ctx.asValue(Main.class.getClassLoader()));
             Value pluginClazz = loaderInstanceVal.invokeMember("loadClass", "me.judge.Usage");
             Value pluginInstance = pluginClazz.invokeMember("getDeclaredConstructor").invokeMember("newInstance");
             JavaPlugin plugin = pluginInstance.as(JavaPlugin.class);
