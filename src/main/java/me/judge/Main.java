@@ -12,8 +12,8 @@ public class Main {
     public static void main(String[] args) {
         File testJar = new File("testjar.jar");
         Engine engine = Engine.newBuilder()
-                .option("--engine.Inlining", "false")
-                .option("--engine.WarnInterpreterOnly", "false")
+                .option("engine.Inlining", "false")
+                .option("engine.WarnInterpreterOnly", "false")
                 .build();
         try(Context ctx = Context.newBuilder("java")
                 .allowAllAccess(true)
