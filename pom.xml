@@ -38,6 +38,11 @@
                             <mainClass>me.judge.Main</mainClass>
                             <outputDirectory>output</outputDirectory>
                             <imageName>main</imageName>
+                            <buildArgs>
+                                <buildArg>
+                                    --add-reads org.graalvm.truffle=ALL-UNNAMED
+                                </buildArg>
+                            </buildArgs>
                         </configuration>
                     </plugin>
                     <plugin>
