@@ -12,6 +12,7 @@ public class Main {
     public static void main(String[] args) {
         File testJar = new File("testjar.jar");
         Engine engine = Engine.newBuilder()
+                .allowExperimentalOptions(true)
                 .option("engine.Inlining", "false")
                 .option("engine.WarnInterpreterOnly", "false")
                 .build();
