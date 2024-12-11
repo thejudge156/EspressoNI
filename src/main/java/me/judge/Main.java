@@ -13,7 +13,7 @@ public class Main {
         File testJar = new File("testjar.jar");
         Engine engine = Engine.newBuilder()
                 .allowExperimentalOptions(true)
-                .option("engine.Inlining", "false")
+                .option("compiler.Inlining", "false")
                 .option("engine.WarnInterpreterOnly", "false")
                 .build();
         try(Context ctx = Context.newBuilder("java")
