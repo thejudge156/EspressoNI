@@ -1,6 +1,7 @@
 package me.judge;
 
 import org.graalvm.polyglot.Context;
+import org.graalvm.polyglot.Engine;
 import org.graalvm.polyglot.Value;
 
 import java.io.File;
@@ -10,8 +11,13 @@ import java.net.URL;
 public class Main {
     public static void main(String[] args) {
         File testJar = new File("testjar.jar");
+        Engine engine = Engine.newBuilder()
+                .option("--compiler.Inlining", "false")
+                .option("--engine.WarnInterpreterOnly", "false")
+                .build();
         try(Context ctx = Context.newBuilder("java")
                 .allowAllAccess(true)
+                .engine(engine)
                 .build()) {
             Value bindings = ctx.getBindings("java");
 
