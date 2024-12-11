@@ -13,7 +13,7 @@ public class Main {
         try(Context ctx = Context.newBuilder("java")
                 .allowAllAccess(true)
                 .build()) {
-            Value loaderClazzVal = ctx.getBindings("java").getMember("java.net.URLClassLoader");
+            Value loaderClazzVal = ctx.getBindings("java").getMember("java.net.URLClassLoader").getMember("class");
             Value loaderMethodVal = loaderClazzVal.invokeMember("getMethod", "newInstance", ctx.asValue(URL[].class), ctx.asValue(ClassLoader.class));
             Value loaderVal = loaderMethodVal.invokeMember("invoke", ctx.asValue(testJar.toURI().toURL()), ctx.asValue(ctx.getClass().getClassLoader()));
             Value pluginClazz = loaderVal.invokeMember("loadClass", "me.judge.Usage");
