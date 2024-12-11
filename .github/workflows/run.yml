@@ -15,4 +15,5 @@ jobs:
         with:
           distribution: 'graalvm' # See 'Supported distributions' for available options
           java-version: '21'
-      - run: mvn package | java -cp target/EspressoNI-1.0-SNAPSHOT.jar me.judge.Main
+      - run: mvn package
+      - run: java -cp target/EspressoNI-1.0-SNAPSHOT.jar me.judge.Main
