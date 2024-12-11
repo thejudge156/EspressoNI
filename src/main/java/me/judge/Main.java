@@ -4,25 +4,19 @@ import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.Value;
 
 import java.io.File;
-import java.io.IOException;
-import java.net.URL;
 
 public class Main {
     public static void main(String[] args) {
         File testJar = new File("testjar.jar");
-        try(Context ctx = Context.newBuilder("java")
+        Context ctx = Context.newBuilder("java")
+                .option("java.Properties.java.class.path", testJar.getAbsolutePath())
                 .allowAllAccess(true)
-                .build()) {
-            Value loaderClazzVal = ctx.getBindings("java").getMember("java.net.URLClassLoader").getMember("class");
-            Value loaderMethodVal = loaderClazzVal.invokeMember("getMethod", "newInstance", ctx.asValue(URL[].class), ctx.asValue(ClassLoader.class));
-            Value loaderVal = loaderMethodVal.invokeMember("invoke", ctx.asValue(testJar.toURI().toURL()), ctx.asValue(ctx.getClass().getClassLoader()));
-            Value pluginClazz = loaderVal.invokeMember("loadClass", "me.judge.Usage");
-            Value pluginInstance = pluginClazz.invokeMember("getDeclaredConstructor").invokeMember("newInstance");
-            JavaPlugin plugin = pluginInstance.as(JavaPlugin.class);
-            plugin.onEnable();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+                .build();
+        Value pluginClazz = ctx.getBindings("java").getMember("me.judge.Usage").getMember("class");
+        JavaPlugin plugin = pluginClazz.as(JavaPlugin.class);
+        plugin.onEnable();
+
+        ctx.close();
     }
 
     public abstract static class JavaPlugin {
