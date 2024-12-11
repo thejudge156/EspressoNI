@@ -14,8 +14,8 @@ public class Main {
                 .allowAllAccess(true)
                 .build();
         Value pluginClazz = ctx.getBindings("java").getMember("java.lang.Class").invokeMember("forName", "me.judge.Usage");
-        JavaPlugin plugin = pluginClazz.invokeMember("getDeclaredConstructor").invokeMember("newInstance")
-                .invokeMember("super").as(JavaPlugin.class);
+        JavaPlugin plugin = pluginClazz.invokeMember("getSuperClass").invokeMember("getDeclaredConstructor")
+                .invokeMember("newInstance").as(JavaPlugin.class);
         plugin.onEnable();
 
         ctx.close();
