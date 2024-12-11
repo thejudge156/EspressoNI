@@ -12,7 +12,7 @@ public class Main {
                 .option("java.Properties.java.class.path", testJar.getAbsolutePath() + ":" + System.getProperty("java.class.path"))
                 .allowAllAccess(true)
                 .build();
-        Value pluginClazz = ctx.getBindings("java").getMember("me.judge.Usage").getMember("class");
+        Value pluginClazz = ctx.getBindings("java").getMember("java.lang.Class").invokeMember("forName", "me.judge.Usage");
         JavaPlugin plugin = pluginClazz.as(JavaPlugin.class);
         plugin.onEnable();
 
