@@ -5,8 +5,6 @@ import org.graalvm.polyglot.Engine;
 import org.graalvm.polyglot.Value;
 
 import java.io.File;
-import java.io.IOException;
-import java.net.URL;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,18 +16,13 @@ public class Main {
                 .build();
         try(Context ctx = Context.newBuilder("java")
                 .allowAllAccess(true)
+                .option("java.Properties.java.class.path", testJar.getAbsolutePath())
                 .engine(engine)
                 .build()) {
-            Value bindings = ctx.getBindings("java");
-
-            Value loaderVal = bindings.getMember("java.net.URLClassLoader");
-            Value loaderInstanceVal = loaderVal.invokeMember("newInstance", ctx.asValue(new URL[]{testJar.toURI().toURL()}));
-            Value pluginClazz = loaderInstanceVal.invokeMember("loadClass", "me.judge.Usage");
-            Value pluginInstance = pluginClazz.invokeMember("getDeclaredConstructor").invokeMember("newInstance");
+            ctx.getBindings("java").putMember("me.judge.JavaPlugin", JavaPlugin.class);
+            Value pluginInstance = ctx.getBindings("java").getMember("me.judge.Usage").invokeMember("getDeclaredConstructor").invokeMember("newInstance");
             JavaPlugin plugin = pluginInstance.as(JavaPlugin.class);
             plugin.onEnable();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
     }
 
