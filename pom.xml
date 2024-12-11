@@ -42,9 +42,6 @@
                                 <buildArg>
                                     --add-reads org.graalvm.truffle=ALL-UNNAMED
                                 </buildArg>
-                                <buildArg>
-                                    -H:+AllowJRTFileSystem
-                                </buildArg>
                             </buildArgs>
                         </configuration>
                     </plugin>
