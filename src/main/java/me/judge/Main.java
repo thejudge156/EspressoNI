@@ -6,16 +6,16 @@ import org.graalvm.polyglot.Value;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.net.URLClassLoader;
 
 public class Main {
     public static void main(String[] args) {
-        Context ctx = Context.newBuilder("java")
-                .allowAllAccess(true)
-                .build();
         File testJar = new File("testjar.jar");
-        try(URLClassLoader loader = URLClassLoader.newInstance(new URL[]{testJar.toURI().toURL()})) {
-            Value loaderVal = ctx.asValue(loader);
+        try(Context ctx = Context.newBuilder("java")
+                .allowAllAccess(true)
+                .build()) {
+            Value loaderClazzVal = ctx.getBindings("java").getMember("java.net.URLClassLoader");
+            Value loaderMethodVal = loaderClazzVal.invokeMember("getMethod", URL[].class, ClassLoader.class);
+            Value loaderVal = loaderMethodVal.invokeMember("invoke", testJar.toURI().toURL(), ctx.getClass().getClassLoader());
             Value pluginClazz = loaderVal.invokeMember("loadClass", "me.judge.Usage");
             Value pluginInstance = pluginClazz.invokeMember("getDeclaredConstructor").invokeMember("newInstance");
             JavaPlugin plugin = pluginInstance.as(JavaPlugin.class);
@@ -23,8 +23,6 @@ public class Main {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-        ctx.close();
     }
 
     public abstract static class JavaPlugin {
