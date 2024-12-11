@@ -23,7 +23,7 @@ public class Main {
             Value bindings = ctx.getBindings("java");
 
             Value loaderVal = bindings.getMember("java.net.URLClassLoader");
-            Value loaderInstanceVal = loaderVal.invokeMember("newInstance", ctx.asValue(new URL[]{testJar.toURI().toURL()}), ctx.asValue(Main.class.getClassLoader()));
+            Value loaderInstanceVal = loaderVal.invokeMember("newInstance", ctx.asValue(new URL[]{testJar.toURI().toURL()}));
             Value pluginClazz = loaderInstanceVal.invokeMember("loadClass", "me.judge.Usage");
             Value pluginInstance = pluginClazz.invokeMember("getDeclaredConstructor").invokeMember("newInstance");
             JavaPlugin plugin = pluginInstance.as(JavaPlugin.class);
