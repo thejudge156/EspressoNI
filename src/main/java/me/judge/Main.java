@@ -11,6 +11,7 @@ public class Main {
         File apiJar = new File("api.jar");
         Context ctx = Context.newBuilder("java")
                 .option("java.Properties.java.class.path", testJar.getAbsolutePath() + ":" + apiJar.getAbsolutePath())
+                .option("java.PolyglotInterfaceMappings", "me.judge.Main$JavaPlugin;")
                 .allowAllAccess(true)
                 .build();
         Value pluginClazz = ctx.getBindings("java").getMember("java.lang.Class").invokeMember("forName", "me.judge.Usage");
@@ -21,7 +22,7 @@ public class Main {
         ctx.close();
     }
 
-    public abstract static class JavaPlugin {
-        public abstract void onEnable();
+    public interface JavaPlugin {
+        void onEnable();
     }
 }
