@@ -1,0 +1,346 @@
+{
+  "reflection": [
+    {
+      "type": "com.intellij.rt.execution.application.AppMainV2$Agent",
+      "methods": [
+        {
+          "name": "premain",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.lang.instrument.Instrumentation"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.lang.ClassLoader",
+      "fields": [
+        {
+          "name": "classLoaderValueMap"
+        }
+      ]
+    },
+    {
+      "type": "java.util.concurrent.atomic.AtomicBoolean",
+      "fields": [
+        {
+          "name": "value"
+        }
+      ]
+    },
+    {
+      "type": "jdk.internal.misc.Unsafe"
+    },
+    {
+      "type": "org.graalvm.home.impl.DefaultHomeFinder"
+    },
+    {
+      "type": "org.graalvm.polyglot.io.IOHelper",
+      "fields": [
+        {
+          "name": "ACCESS"
+        }
+      ]
+    },
+    {
+      "type": "org.graalvm.polyglot.management.Management",
+      "fields": [
+        {
+          "name": "ACCESS"
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.DRBG",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.security.SecureRandomParameters"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA2$SHA256",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "glob": "META-INF/resources/engine/libtruffleattach/windows/amd64/sha256"
+    },
+    {
+      "glob": "META-INF/resources/java/espresso-libs/windows/amd64/sha256"
+    },
+    {
+      "glob": "META-INF/resources/java/espresso-runtime-jdk21/windows/amd64/sha256"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native-lib/windows/amd64/sha256"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/KERNEL32.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/VCRUNTIME140.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/api-ms-win-crt-conio-l1-1-0.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/api-ms-win-crt-convert-l1-1-0.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/api-ms-win-crt-environment-l1-1-0.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/api-ms-win-crt-filesystem-l1-1-0.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/api-ms-win-crt-locale-l1-1-0.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/api-ms-win-crt-math-l1-1-0.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/api-ms-win-crt-process-l1-1-0.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/api-ms-win-crt-stdio-l1-1-0.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/api-ms-win-crt-string-l1-1-0.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/api-ms-win-crt-time-l1-1-0.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/api-ms-win-crt-utility-l1-1-0.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/graalvm-llvm.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/nespresso.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/sulong++.dll"
+    },
+    {
+      "glob": "META-INF/resources/llvm/native/windows/amd64/lib/sulong.dll"
+    },
+    {
+      "glob": "META-INF/resources/nfi-native/libnfi/windows/amd64/sha256"
+    },
+    {
+      "glob": "META-INF/services/com.oracle.truffle.api.TruffleLanguage$Provider"
+    },
+    {
+      "glob": "META-INF/services/com.oracle.truffle.api.TruffleRuntimeAccess"
+    },
+    {
+      "glob": "META-INF/services/com.oracle.truffle.api.impl.TruffleLocator"
+    },
+    {
+      "glob": "META-INF/services/com.oracle.truffle.api.instrumentation.TruffleInstrument$Provider"
+    },
+    {
+      "glob": "META-INF/services/com.oracle.truffle.api.instrumentation.provider.TruffleInstrumentProvider"
+    },
+    {
+      "glob": "META-INF/services/com.oracle.truffle.api.library.DefaultExportProvider"
+    },
+    {
+      "glob": "META-INF/services/com.oracle.truffle.api.library.provider.DefaultExportProvider"
+    },
+    {
+      "glob": "META-INF/services/com.oracle.truffle.api.provider.InternalResourceProvider"
+    },
+    {
+      "glob": "META-INF/services/com.oracle.truffle.api.provider.TruffleLanguageProvider"
+    },
+    {
+      "glob": "META-INF/services/com.oracle.truffle.llvm.runtime.config.ConfigurationFactory"
+    },
+    {
+      "glob": "META-INF/services/com.oracle.truffle.llvm.spi.internal.LLVMResourceProvider"
+    },
+    {
+      "glob": "META-INF/services/com.oracle.truffle.runtime.EngineCacheSupport"
+    },
+    {
+      "glob": "META-INF/services/com.oracle.truffle.runtime.FloodControlHandler"
+    },
+    {
+      "glob": "META-INF/services/com.oracle.truffle.runtime.LoopNodeFactory"
+    },
+    {
+      "glob": "META-INF/services/com.oracle.truffle.runtime.TruffleTypes"
+    },
+    {
+      "glob": "META-INF/services/com.oracle.truffle.runtime.jfr.EventFactory$Provider"
+    },
+    {
+      "glob": "META-INF/services/org.graalvm.home.HomeFinder"
+    },
+    {
+      "glob": "META-INF/services/org.graalvm.polyglot.impl.AbstractPolyglotImpl"
+    },
+    {
+      "module": "jdk.jfr",
+      "glob": "jdk/jfr/internal/types/metadata.bin"
+    }
+  ],
+  "bundles": [],
+  "jni": [
+    {
+      "type": "java.lang.Boolean",
+      "methods": [
+        {
+          "name": "getBoolean",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.lang.Class",
+      "methods": [
+        {
+          "name": "getClassLoader",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "java.lang.ClassLoader",
+      "methods": [
+        {
+          "name": "loadClass",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.lang.InternalError",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "jdk.internal.loader.ClassLoaders$AppClassLoader"
+    },
+    {
+      "type": "me.judge.Main",
+      "methods": [
+        {
+          "name": "main",
+          "parameterTypes": [
+            "java.lang.String[]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.instrument.InstrumentationImpl",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "long",
+            "boolean",
+            "boolean",
+            "boolean"
+          ]
+        },
+        {
+          "name": "loadClassAndCallAgentmain",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "loadClassAndCallPremain",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "transform",
+          "parameterTypes": [
+            "java.lang.Module",
+            "java.lang.ClassLoader",
+            "java.lang.String",
+            "java.lang.Class",
+            "java.security.ProtectionDomain",
+            "byte[]",
+            "boolean"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.launcher.LauncherHelper",
+      "fields": [
+        {
+          "name": "isStaticMain"
+        },
+        {
+          "name": "noArgMain"
+        }
+      ],
+      "methods": [
+        {
+          "name": "checkAndLoadMain",
+          "parameterTypes": [
+            "boolean",
+            "int",
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "getApplicationClass",
+          "parameterTypes": []
+        },
+        {
+          "name": "makePlatformString",
+          "parameterTypes": [
+            "boolean",
+            "byte[]"
+          ]
+        }
+      ]
+    }
+  ]
+}
