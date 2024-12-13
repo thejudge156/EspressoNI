@@ -13,10 +13,10 @@ public class Main {
                 .option("java.Classpath", testJar.getAbsolutePath() + ":" + apiJar.getAbsolutePath())
                 .allowAllAccess(true)
                 .build();
-        Value pluginClazz = ctx.getBindings("java").getMember("me.judge.Usage").getMember("static");
+        Value pluginClazz = ctx.getBindings("java").getMember("me.judge.Usage");
         System.out.println(pluginClazz.getMemberKeys());
 
-        ctx.close();
+        ctx.close(true);
     }
 
     public interface JavaPlugin {
