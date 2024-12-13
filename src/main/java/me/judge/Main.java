@@ -14,9 +14,7 @@ public class Main {
                 .allowAllAccess(true)
                 .build();
         Value pluginClazz = ctx.getBindings("java").getMember("me.judge.Usage").getMember("static");
-        JavaPlugin plugin = pluginClazz.invokeMember("getDeclaredConstructor")
-                .invokeMember("newInstance").as(JavaPlugin.class);
-        plugin.onEnable();
+        System.out.println(pluginClazz.getMember("mirror").getMemberKeys());
 
         ctx.close();
     }
