@@ -42,6 +42,9 @@
                                 <buildArg>
                                     --add-reads org.graalvm.truffle=ALL-UNNAMED
                                 </buildArg>
+                                <buildArg>
+                                    -H:+AllowJRTFileSystem
+                                </buildArg>
                             </buildArgs>
                         </configuration>
                     </plugin>
@@ -92,7 +95,6 @@
             <artifactId>java</artifactId>
             <version>24.1.1</version>
             <type>pom</type>
-            <scope>runtime</scope>
         </dependency>
     </dependencies>
 </project>

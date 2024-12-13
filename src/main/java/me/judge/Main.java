@@ -8,13 +8,11 @@ import java.io.File;
 public class Main {
     public static void main(String[] args) {
         File testJar = new File("testjar.jar");
-        File apiJar = new File("api.jar");
         Context ctx = Context.newBuilder("java")
-                .option("java.Properties.java.class.path", testJar.getAbsolutePath() + ":" + apiJar.getAbsolutePath())
-                .option("java.PolyglotInterfaceMappings", "me.judge.Main$JavaPlugin;")
+                .option("java.Classpath", testJar.getAbsolutePath())
                 .allowAllAccess(true)
                 .build();
-        Value pluginClazz = ctx.getBindings("java").getMember("java.lang.Class").invokeMember("forName", "me.judge.Usage");
+        Value pluginClazz = ctx.getBindings("java").getMember("me.judge.Usage").getMember("static");
         JavaPlugin plugin = pluginClazz.invokeMember("getDeclaredConstructor")
                 .invokeMember("newInstance").as(JavaPlugin.class);
         plugin.onEnable();
