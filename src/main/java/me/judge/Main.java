@@ -14,7 +14,7 @@ public class Main {
                 .allowAllAccess(true)
                 .build();
         Value pluginClazz = ctx.getBindings("java").getMember("me.judge.Usage").getMember("static");
-        System.out.println(pluginClazz.getMember("mirror").getMemberKeys());
+        System.out.println(pluginClazz.getMemberKeys());
 
         ctx.close();
     }
