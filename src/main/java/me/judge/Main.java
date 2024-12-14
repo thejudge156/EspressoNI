@@ -13,7 +13,8 @@ public class Main {
                 .option("engine.RelaxStaticObjectSafetyChecks", "true")
                 .allowAllAccess(true)
                 .build();
-        Value pluginClazz = ctx.getBindings("java").getMember("java.lang.Class").invokeMember("forName", "me.judge.Usage", false, Value.asValue(ClassLoader.getPlatformClassLoader()));
+        ctx.getBindings("java").getMember("java.lang.Class").invokeMember("forName", "me.judge.Usage", true, ctx.asValue(Main.class.getClassLoader()));
+        Value pluginClazz = ctx.getBindings("java").getMember("java.lang.Class").invokeMember("forName", "me.judge.Usage", false, ctx.asValue(ClassLoader.getPlatformClassLoader()));
         System.out.println(pluginClazz.getMemberKeys());
 
         ctx.close(true);
