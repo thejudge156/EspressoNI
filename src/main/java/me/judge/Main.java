@@ -10,6 +10,7 @@ public class Main {
         File testJar = new File("testjar.jar");
         Context ctx = Context.newBuilder("java")
                 .option("java.Classpath", testJar.getAbsolutePath())
+                .option("engine.RelaxStaticObjectSafetyChecks", "true")
                 .allowAllAccess(true)
                 .build();
         Value pluginClazz = ctx.getBindings("java").getMember("java.lang.Class").invokeMember("forName", "me.judge.Usage", false, Value.asValue(ClassLoader.getPlatformClassLoader()));
