@@ -21,7 +21,7 @@ public class Main {
     public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, ClassNotFoundException {
         File testJar = new File("testjar.jar");
         Context ctx = Context.newBuilder("java")
-                .option("java.Classpath", testJar.getAbsolutePath() + ";" + System.getProperty("java.class.path"))
+                .option("java.Classpath", testJar.getAbsolutePath() + ":" + System.getProperty("java.class.path"))
                 .allowAllAccess(true)
                 .build();
         Value furyVal = ctx.getBindings("java").getMember("org.apache.fury.Fury");
