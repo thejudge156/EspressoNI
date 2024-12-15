@@ -1,0 +1,392 @@
+{
+  "reflection": [
+    {
+      "type": "com.google.common.collect.EmptyImmutableBiMap"
+    },
+    {
+      "type": "com.google.common.collect.EmptyImmutableSet"
+    },
+    {
+      "type": "com.google.common.collect.EmptyImmutableSortedMap"
+    },
+    {
+      "type": "com.google.common.collect.EmptyImmutableSortedSet"
+    },
+    {
+      "type": "com.google.common.collect.ImmutableBiMap$Builder",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "int"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "com.google.common.collect.ImmutableMap$Builder",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "int"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "com.google.common.collect.RegularImmutableList",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Object[]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.io.ObjectStreamClass",
+      "fields": [
+        {
+          "name": "readResolveMethod"
+        }
+      ]
+    },
+    {
+      "type": "java.lang.AbstractStringBuilder",
+      "methods": [
+        {
+          "name": "getCoder",
+          "parameterTypes": []
+        },
+        {
+          "name": "getValue",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "java.lang.Class",
+      "methods": [
+        {
+          "name": "isRecord",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "java.lang.Iterable"
+    },
+    {
+      "type": "java.lang.Object",
+      "allDeclaredFields": true
+    },
+    {
+      "type": "java.lang.String",
+      "allDeclaredFields": true,
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "byte[]",
+            "byte"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.lang.StringCoding",
+      "methods": [
+        {
+          "name": "newStringLatin1",
+          "parameterTypes": [
+            "byte[]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.lang.invoke.MethodHandles$Lookup",
+      "fields": [
+        {
+          "name": "IMPL_LOOKUP"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Class",
+            "java.lang.Class",
+            "int"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.lang.invoke.SerializedLambda"
+    },
+    {
+      "type": "java.lang.reflect.Proxy",
+      "allDeclaredFields": true
+    },
+    {
+      "type": "java.lang.reflect.RecordComponent"
+    },
+    {
+      "type": "java.nio.Bits",
+      "fields": [
+        {
+          "name": "UNALIGNED"
+        }
+      ]
+    },
+    {
+      "type": "java.util.AbstractList$RandomAccessSubList"
+    },
+    {
+      "type": "java.util.AbstractList$SubList"
+    },
+    {
+      "type": "java.util.ArrayList$SubList"
+    },
+    {
+      "type": "java.util.Arrays$ArrayList",
+      "fields": [
+        {
+          "name": "a"
+        }
+      ]
+    },
+    {
+      "type": "java.util.Collections$SetFromMap",
+      "fields": [
+        {
+          "name": "m"
+        },
+        {
+          "name": "s"
+        }
+      ]
+    },
+    {
+      "type": "java.util.Collections$SynchronizedCollection",
+      "fields": [
+        {
+          "name": "c"
+        }
+      ]
+    },
+    {
+      "type": "java.util.Collections$SynchronizedMap",
+      "fields": [
+        {
+          "name": "m"
+        }
+      ]
+    },
+    {
+      "type": "java.util.Collections$UnmodifiableCollection",
+      "fields": [
+        {
+          "name": "c"
+        }
+      ]
+    },
+    {
+      "type": "java.util.Collections$UnmodifiableMap",
+      "fields": [
+        {
+          "name": "m"
+        }
+      ]
+    },
+    {
+      "type": "java.util.EnumMap",
+      "fields": [
+        {
+          "name": "keyType"
+        }
+      ]
+    },
+    {
+      "type": "java.util.ImmutableCollections$List12"
+    },
+    {
+      "type": "java.util.ImmutableCollections$ListN"
+    },
+    {
+      "type": "java.util.ImmutableCollections$Map1",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Object",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.util.ImmutableCollections$MapN",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Object[]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.util.ImmutableCollections$Set12"
+    },
+    {
+      "type": "java.util.ImmutableCollections$SetN"
+    },
+    {
+      "type": "java.util.ImmutableCollections$SubList"
+    },
+    {
+      "type": "java.util.Iterator"
+    },
+    {
+      "type": "java.util.List",
+      "methods": [
+        {
+          "name": "of",
+          "parameterTypes": [
+            "java.lang.Object[]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.util.Map"
+    },
+    {
+      "type": "java.util.RandomAccessSubList"
+    },
+    {
+      "type": "java.util.Set",
+      "methods": [
+        {
+          "name": "of",
+          "parameterTypes": [
+            "java.lang.Object[]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.util.SubList"
+    },
+    {
+      "type": "java.util.concurrent.ConcurrentSkipListMap",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.util.Comparator"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.util.concurrent.ConcurrentSkipListSet",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.util.Comparator"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "me.judge.Usage",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.apache.fury.serializer.ReplaceResolveSerializer$ReplaceStub",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.misc.Unsafe",
+      "fields": [
+        {
+          "name": "theInternalUnsafe"
+        },
+        {
+          "name": "theUnsafe"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "glob": "META-INF/services/java.lang.System$LoggerFinder"
+    },
+    {
+      "glob": "META-INF/services/java.time.zone.ZoneRulesProvider"
+    }
+  ],
+  "bundles": [],
+  "serialization": [
+    {
+      "type": "java.lang.invoke.SerializedLambda"
+    }
+  ],
+  "jni": [
+    {
+      "type": "java.lang.Boolean",
+      "methods": [
+        {
+          "name": "getBoolean",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "me.judge.Main",
+      "methods": [
+        {
+          "name": "main",
+          "parameterTypes": [
+            "java.lang.String[]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.launcher.LauncherHelper",
+      "fields": [
+        {
+          "name": "isStaticMain"
+        },
+        {
+          "name": "noArgMain"
+        }
+      ],
+      "methods": [
+        {
+          "name": "getApplicationClass",
+          "parameterTypes": []
+        }
+      ]
+    }
+  ]
+}
